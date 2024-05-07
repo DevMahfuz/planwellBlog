@@ -3,6 +3,7 @@ import Header from "@/components/header/header";
 import FormatDate from "@/components/formateDate/formateDate";
 import Footer from "@/components/footer/footer";
 import Link from "next/link";
+import RelatedPost from "@/components/related-post/related-post";
 
 async function getData(str) {
   const res = await fetch(
@@ -49,6 +50,10 @@ export default async function Page({ params }) {
           })}
         </div>
       </section>
+      <h3 style={{ textAlign: "center", fontSize: "xx-large" }}>
+        Related Posts
+      </h3>
+      <RelatedPost tagName={post.tags[0].slug} />
       <Footer />
     </>
   );
