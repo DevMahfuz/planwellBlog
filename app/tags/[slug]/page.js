@@ -2,12 +2,12 @@ import Breadcrumbs from "@/components/breadcrumbs/breadcrumbs";
 import Header from "@/components/header/header";
 
 import PostPreview from "@/components/post-preview/post-preview";
-import Pagination from "./Pagination";
+import Pagination from "../../Pagination";
 import Footer from "@/components/footer/footer";
 
-async function getData() {
+async function getData(str) {
   const res = await fetch(
-    `https://demo.ghost.io/ghost/api/content/posts/?key=${process.env.NEXT_PUBLIC_GHOST_APY_KEY}&include=authors,tags&limit=6`
+    `https://demo.ghost.io/ghost/api/content/posts/?key=${process.env.NEXT_PUBLIC_GHOST_APY_KEY}&include=authors,tags&limit=6&filter=tag:${str}`
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -20,8 +20,8 @@ async function getData() {
   return res.json();
 }
 
-export default async function Page() {
-  const posts = await getData();
+export default async function TagPage({ params }) {
+  const posts = await getData(params.slug);
 
   return (
     <>
