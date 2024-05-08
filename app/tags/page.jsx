@@ -5,7 +5,7 @@ import Footer from "@/components/footer/footer";
 
 async function getData() {
   const res = await fetch(
-    `https://demo.ghost.io/ghost/api/content/tags/?key=${process.env.NEXT_PUBLIC_GHOST_APY_KEY}`
+    `https://planwell.ghost.io/ghost/api/content/tags/?key=${process.env.NEXT_PUBLIC_GHOST_APY_KEY}`
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
