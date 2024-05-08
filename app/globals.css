@@ -7,14 +7,14 @@
 }
 body {
   box-sizing: border-box;
-  font-family: "DM Sans", sans-serif;
   background-color: #eef4fb;
-  font-family: "Satoshi-Light";
+  font-family: "Satoshi";
   src: url("/fonts/Satoshi-Light.woff2") format("woff2"),
     url("/fonts/Satoshi-Light.woff") format("woff"),
     url("/fonts/Satoshi-Light.ttf") format("truetype");
 }
 h1 {
+  font-family: "Satoshi";
   font-size: 4rem;
   font-weight: 700;
 }
