@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "demo.ghost.io",
+        hostname: "planwell.ghost.io",
       },
     ],
   },

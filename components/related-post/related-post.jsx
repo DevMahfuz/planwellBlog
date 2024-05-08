@@ -2,7 +2,7 @@ import PostPreview from "../post-preview/post-preview";
 
 async function getRelatedPost(str) {
   const res = await fetch(
-    `https://demo.ghost.io/ghost/api/content/posts?key=${process.env.NEXT_PUBLIC_GHOST_APY_KEY}&include=authors,tags&limit=3&filter=tag:${str}`
+    `https://planwell.ghost.io/ghost/api/content/posts?key=${process.env.NEXT_PUBLIC_GHOST_APY_KEY}&include=authors,tags&limit=3&filter=tag:${str}`
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.

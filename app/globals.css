@@ -8,6 +8,15 @@
 body {
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
+  background-color: #eef4fb;
+  font-family: "Satoshi-Light";
+  src: url("/fonts/Satoshi-Light.woff2") format("woff2"),
+    url("/fonts/Satoshi-Light.woff") format("woff"),
+    url("/fonts/Satoshi-Light.ttf") format("truetype");
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
 }
 a {
   text-decoration: none;
@@ -62,14 +71,23 @@ nav a:hover {
   color: rgb(52, 51, 51);
   width: 100%;
   text-align: center;
-  margin: 20px auto;
+  margin: 50px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 .breadcrumb a {
   color: rgb(22, 22, 22);
+  opacity: 0.6;
+}
+.breadcrumb a:hover {
+  opacity: 1;
+  text-decoration: none;
 }
 .breadcrumb li {
   list-style: none;
@@ -99,14 +117,13 @@ nav a:hover {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 20px;
+  gap: 10px;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .post-item-wrapper {
-  width: 300px;
-  padding: 20px;
-  background-color: #e7e5e5;
+  width: 350px;
   border-radius: 10px;
 }
 
@@ -115,21 +132,29 @@ nav a:hover {
   width: 100%;
 }
 .post-item-wrapper .tag-name {
-  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 11px;
+  font-size: 11px;
+  font-weight: 600;
   color: #267af8;
   font-weight: 600;
   margin: 20px 0px;
 }
 .post-item-wrapper h3 {
   text-transform: capitalize;
-  color: #224373;
+  font-family: "Satoshi";
+  color: #002159;
   font-weight: 700;
+  font-size: 21px;
   margin-bottom: 20px;
 }
 .post-item-wrapper p {
   font-size: medium;
-  color: #666666;
+  font-weight: 500;
+  color: #8a909a;
   overflow: hidden;
+  font-family: "Satoshi-Light";
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -143,10 +168,13 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  font-size: small;
-  font-weight: 900;
-  color: #484848;
-  margin: 10px 0px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 11px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8a909a;
+  margin-top: 30px;
 }
 .pagination-container {
   display: flex;
@@ -197,6 +225,7 @@ nav a:hover {
 }
 
 .single-post-container h1 {
+  font-family: "Satoshi";
   font-size: xx-large;
   font-weight: 900;
   text-transform: capitalize;
@@ -224,6 +253,7 @@ nav a:hover {
 }
 .single-post-container p {
   margin: 10px 0px;
+  font-family: "Satoshi";
 }
 .single-post-container ul {
   margin-left: 50px;
@@ -233,28 +263,33 @@ nav a:hover {
 .single-post-container h2,
 .single-post-container h3 {
   margin: 20px 0px;
+  font-family: "Satoshi";
 }
 .tags-container {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 50px;
 }
 
 .tags-container a {
-  padding: 5px 10px;
-  border-radius: 20px;
-  border: 1px solid #267af8;
-  color: #666666;
-  transition: all 0.5s ease;
+  font-size: 10px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border: 1px solid #e6e9ec;
+  margin: 5px;
+  line-height: 1.5;
+  color: #002159;
+  border-radius: 50px;
 }
 .tags-container a:hover {
-  background: #267af8;
-  color: #fff;
+  border: 1px solid rgb(8, 8, 8);
 }
 
 footer {

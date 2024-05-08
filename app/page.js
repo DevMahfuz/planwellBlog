@@ -7,7 +7,7 @@ import Footer from "@/components/footer/footer";
 
 async function getData() {
   const res = await fetch(
-    `https://demo.ghost.io/ghost/api/content/posts/?key=${process.env.NEXT_PUBLIC_GHOST_APY_KEY}&include=authors,tags&limit=6`
+    `https://planwell.ghost.io/ghost/api/content/posts/?key=${process.env.NEXT_PUBLIC_GHOST_APY_KEY}&include=authors,tags&limit=6`
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -27,7 +27,7 @@ export default async function Page() {
     <>
       <Header />
       <Breadcrumbs />
-      <h1 style={{ textAlign: "center" }}>Planwell Blog</h1>
+      <h1 style={{ textAlign: "center", color: "#002159" }}>Planwell Blog</h1>
 
       <main className="container posts-container">
         {posts.posts?.map((post) => {
